@@ -1,0 +1,287 @@
+/* ===== LOGIN PAGE (ADDED - NO OTHER CHANGES) ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #5f9cff, #d946ef);
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 350px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(to right, #5f9cff, #d946ef);
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.role-selection {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.role-selection label {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #5f9cff;
+}
+
+
+/* ===== GLOBAL ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: url("wood-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* DARK OVERLAY FOR READABILITY */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: -1;
+}
+
+/* HEADINGS */
+.heading-Explore, .admin-title {
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+/* ===== BUTTONS (CHANGED TO BLACK) ===== */
+button {
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #333;
+}
+
+/* LOGOUT */
+.logout-btn {
+  float: right;
+  margin: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tabs button {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* MENU */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.9);
+  border-radius: 15px;
+  text-align: center;
+  padding-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* CART */
+.cart-box {
+  background: rgba(255,255,255,0.9);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* ADMIN */
+.admin-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.admin-card {
+  background: rgba(255,255,255,0.9);
+  padding: 20px;
+  border-radius: 15px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.admin-card input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.admin-card button {
+  width: 100%;
+  padding: 10px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #0a0a0a;
+  color: white;
+  margin-top: 40px;
+}
+
+.footer-content {
+  padding: 30px;
+  text-align: center;
+}
+
+.social-icons {
+  margin-bottom: 15px;
+}
+
+.icon {
+  margin: 0 10px;
+  font-size: 18px;
+  background: #222;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icon:hover {
+  background: #ff5722;
+}
+
+.footer-links a {
+  color: #ccc;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  background: #111;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+/* ===== ADMIN DELETE BUTTON ONLY ===== */
+.food-item button {
+  background: #e53935;   /* red color */
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.food-item button:hover {
+  background: #b71c1c;   /* darker red on hover */
+}
+.card button {
+  margin: 5px;
+}
+/* ===== FEEDBACK ===== */
+.feedback-box {
+  background: rgba(255,255,255,0.9);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.feedback-box input,
+.feedback-box textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.feedback-box textarea {
+  height: 80px;
+  resize: none;
+}
+/* ===== PROFESSIONAL BUTTON STYLE ===== */
+button {
+  background: linear-gradient(135deg, #000000, #2c2c2c);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #1a1a1a, #444);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+button:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}

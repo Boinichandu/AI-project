@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Hotel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2 class="heading-Explore">Select a Hotel</h2>
+
+<div class="menu-grid">
+
+  <div class="card" onclick="selectHotel('Taj Hotel')">
+    <img src="https://picsum.photos/300/200?1">
+    <h3>Taj Hotel</h3>
+  </div>
+
+  <div class="card" onclick="selectHotel('Paradise')">
+    <img src="https://picsum.photos/300/200?2">
+    <h3>Paradise</h3>
+  </div>
+
+  <div class="card" onclick="selectHotel('Bawarchi')">
+    <img src="https://picsum.photos/300/200?3">
+    <h3>Bawarchi</h3>
+  </div>
+
+  <div class="card" onclick="selectHotel('Mehfil')">
+    <img src="https://picsum.photos/300/200?4">
+    <h3>Mehfil</h3>
+  </div>
+
+</div>
+
+<script>
+function selectHotel(hotelName) {
+  localStorage.setItem("hotel", hotelName);
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

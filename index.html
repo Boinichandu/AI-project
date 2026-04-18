@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Menu</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<h2 class="heading-Explore">Explore Menu</h2>
+<h3 id="hotelName" style="text-align:center; color:white;"></h3>
+
+<button onclick="logout()" class="logout-btn">Logout</button>
+
+<!-- CATEGORY -->
+<div class="tabs">
+  <button onclick="showCategory('all')">All</button>
+  <button onclick="showCategory('Appetizer')">Appetizers</button>
+  <button onclick="showCategory('Soup')">Soups</button>
+  <button onclick="showCategory('Main')">Main</button>
+  <button onclick="showCategory('Dessert')">Desserts</button>
+</div>
+
+<!-- MENU -->
+<div id="menu" class="menu-grid"></div>
+
+<!-- CART -->
+<div class="cart-box">
+  <h3>Cart</h3>
+  <div id="cart"></div>
+  <h4 id="total">Total: ₹0</h4>
+</div>
+<div class="feedback-box">
+  <h3>Give Feedback</h3>
+
+  <input id="fbName" placeholder="Your Name">
+  <textarea id="fbMessage" placeholder="Your Feedback"></textarea>
+
+  <button onclick="submitFeedback()">Submit</button>
+</div>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+
+    <div class="social-icons">
+      <i class="fab fa-facebook-f icon"></i>
+      <i class="fab fa-instagram icon"></i>
+      <i class="fab fa-twitter icon"></i>
+      <i class="fab fa-google icon"></i>
+      <i class="fab fa-youtube icon"></i>
+    </div>
+
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">News</a>
+      <a href="#">About</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Our Team</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright ©2026, Designed by YOU</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+function logout() {
+  localStorage.removeItem("user");
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

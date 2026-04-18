@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-container">  
+  <div class="login-card">
+    <h2>Login</h2>
+
+    <!-- Role Selection -->
+    <div class="role-selection">
+      <label><input type="radio" name="role" value="user" checked> User</label>
+      <label><input type="radio" name="role" value="admin"> Admin</label>
+    </div>
+
+    <div class="input-box">
+      <input id="email" type="text" placeholder="Email">
+    </div>
+
+    <div class="input-box">
+      <input id="password" type="password" placeholder="Password">
+    </div>
+
+    <button class="login-btn" onclick="login()">LOGIN</button>
+
+    <!-- ✅ Create Account -->
+    <p style="margin-top:10px;">
+      Don't have an account?
+      <a href="signup.html">Create Account</a>
+    </p>
+  </div>
+</div>
+
+<script>
+function login() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const role = document.querySelector('input[name="role"]:checked').value;
+
+  fetch("http://localhost:5000/user/login", {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({ email, password, role })
+  })
+  .then(res => {
+    if (!res.ok) throw new Error("Login failed");
+    return res.json();
+  })
+  .then(data => {
+    alert("Login Success"); // optional but useful
+    localStorage.setItem("user", JSON.stringify(data.user));
+
+    // ✅ UPDATED FLOW
+    if (role === "admin") {
+      window.location.href = "admin.html";
+    } else {
+      window.location.href = "hotel.html"; // 🔥 go to hotel selection
+    }
+  })
+  .catch(() => {
+    alert("Invalid Login");
+  });
+}
+</script>
+
+</body>
+</html>
